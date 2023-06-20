@@ -1,7 +1,9 @@
 package com.microservices.email.model;
 
+import com.microservices.email.dto.requests.EmailRequest;
 import com.microservices.email.enums.StatusEmail;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -10,6 +12,7 @@ import java.util.UUID;
 @Data
 @Entity
 @Table(name = "TB_EMAIL")
+@Builder
 public class EmailModel {
 
     @Id
@@ -24,4 +27,17 @@ public class EmailModel {
     private LocalDateTime sendDateEmail;
     private StatusEmail statusEmail;
 
+    public static EmailModel of(EmailRequest dto) {
+        EmailModel.builder()
+                .emailFrom(dto.emailFrom())
+                .emailTo(dto.emailTo())
+                .ownerRef(dto.ownerRef())
+                .subject(dto.subject())
+                .text(dto.text())
+                .sendDateEmail(LocalDateTime.now());
+        return builder().build();
+
+    }
+
 }
+
