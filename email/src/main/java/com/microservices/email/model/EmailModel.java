@@ -11,7 +11,7 @@ import java.util.UUID;
 
 @Data
 @Entity
-@Table(name = "TB_EMAIL")
+@Table(name = "email")
 @Builder
 public class EmailModel {
 
@@ -28,15 +28,14 @@ public class EmailModel {
     private StatusEmail statusEmail;
 
     public static EmailModel of(EmailRequest dto) {
-        EmailModel.builder()
+        return EmailModel.builder()
                 .emailFrom(dto.emailFrom())
                 .emailTo(dto.emailTo())
                 .ownerRef(dto.ownerRef())
                 .subject(dto.subject())
                 .text(dto.text())
-                .sendDateEmail(LocalDateTime.now());
-        return builder().build();
-
+                .sendDateEmail(LocalDateTime.now())
+                .build();
     }
 
 }
