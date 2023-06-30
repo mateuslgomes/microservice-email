@@ -19,8 +19,7 @@ public class EmailService {
     @Autowired
     JavaMailSender mailSender;
 
-    public void sendEmail(EmailRequest dto) {
-        var email = EmailModel.of(dto);
+    public void sendEmail(EmailModel email) {
         try {
             SimpleMailMessage message = new SimpleMailMessage();
             message.setFrom(email.getEmailFrom());
