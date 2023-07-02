@@ -15,8 +15,8 @@ Tecnologias
 - Banco de dados MySQL
 
 Como executar o projeto:
-
-Clone este repositório: git clone https://github.com/mateuslgomes/microservice-email.git
+                                                    
+Clone este repositório: git clone https://github.com/mateuslgomes/microservice-email.git                                                                                        
 Importe o projeto em sua IDE preferida.
 Configure as informações de conexão com o RabbitMQ e o banco de dados no arquivo application.properties.
 Execute o aplicativo a partir da classe principal: EmailMicroserviceApplication.java.
@@ -24,9 +24,10 @@ Execute o aplicativo a partir da classe principal: EmailMicroserviceApplication.
 Contribuição:
 
 Se você quiser contribuir com este projeto, fique à vontade para fazer um fork e enviar um pull request com suas melhorias.
+
 Entre em contato:
 
 Se tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato através dos canais listados abaixo:
 
-E-mail: dev.mateuslgomes@gmail.com
+E-mail: dev.mateuslgomes@gmail.com                                                                               
 GitHub: https://github.com/mateuslgomes
