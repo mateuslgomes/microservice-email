@@ -18,7 +18,7 @@ Como executar o projeto:
                                                     
 Clone este repositório: git clone https://github.com/mateuslgomes/microservice-email.git                                                                                        
 Importe o projeto em sua IDE preferida.
-Configure as informações de conexão com o RabbitMQ e o banco de dados no arquivo application.properties.
+Configure as informações de conexão com o RabbitMQ e o banco de dados no arquivo application.properties.                                                            
 Execute o aplicativo a partir da classe principal: EmailMicroserviceApplication.java.
 
 Contribuição:
